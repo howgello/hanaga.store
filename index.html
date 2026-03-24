@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HANAGA.STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">HANAGA.STORE</div>
+            <div class="cart-icon" id="cart-open">🛒 <span id="cart-count">0</span></div>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <span class="nav-link active" data-section="section-tshirts">Футболки</span>
+        <span class="nav-link" data-section="section-pants">Штаны</span>
+        <span class="nav-link" data-section="section-accessories">Аксессуары</span>
+        <span class="nav-link" data-section="section-about">О нас</span>
+    </nav>
+
+    <main>
+        <section id="section-tshirts" class="content-section active">
+            <h2>Коллекция футболок</h2>
+            <div class="product-grid">
+                
+                <div class="card" data-stock="in">
+                    <div class="img-box"><img src="mclovin.jpg" alt="Mclovin"></div>
+                    <h3>Mclovin</h3>
+                    <p class="price">550 KGS</p>
+                    <button class="add-btn" data-name="Mclovin" data-price="550">Сохранить</button>
+                </div>
+
+                <div class="card" data-stock="in">
+                    <div class="img-box"><img src="sakura.jpg" alt="Sakura"></div>
+                    <h3>Sakura</h3>
+                    <p class="price">650 KGS</p>
+                    <button class="add-btn" data-name="Sakura" data-price="650">Сохранить</button>
+                </div>
+
+                <div class="card" data-stock="in">
+                    <div class="img-box"><img src="th3.jpg" alt="Футболка 3"></div>
+                    <h3>T-shirt Basic</h3>
+                    <p class="price">550 KGS</p>
+                    <button class="add-btn" data-name="T-shirt Basic" data-price="550">Сохранить</button>
+                </div>
+
+                <div class="card" data-stock="in">
+                    <div class="img-box"><img src="vest1.jpg" alt="Vest 1"></div>
+                    <h3>Vest Premium</h3>
+                    <p class="price">1800 KGS</p>
+                    <button class="add-btn" data-name="Vest Premium" data-price="1800">Сохранить</button>
+                </div>
+
+                <div class="card" data-stock="in">
+                    <div class="img-box"><img src="vest2.jpg" alt="Vest 2"></div>
+                    <h3>Vest Classic</h3>
+                    <p class="price">800 KGS</p>
+                    <button class="add-btn" data-name="Vest Classic" data-price="800">Сохранить</button>
+                </div>
+                
+                <div class="card" data-stock="in">
+                    <div class="img-box">
+                        <img src="tang1.jpg" id="ts-color-img" alt="Tang suit shirt">
+                    </div>
+                    <h3>Tang suit shirt</h3>
+                    <div class="variant-picker">
+                        <span>Цвет:</span>
+                        <select id="color-select">
+                            <option value="Черная" selected>Черная</option>
+                            <option value="Белая">Белая</option>
+                        </select>
+                    </div>
+                    <p class="price">880 KGS</p>
+                    <button class="add-btn" id="add-custom-tshirt" data-name="Tang suit shirt (Черная)" data-price="880">Сохранить</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-pants" class="content-section">
+            <h2>Джинсы</h2>
+            <div class="product-grid">
+                <div class="card" data-stock="in">
+                    <div class="img-box contain-img"><img src="jeans1.jpg" alt="Джинсы 1"></div>
+                    <h3>Wide Leg Denim</h3>
+                    <p class="price">1100 KGS</p>
+                    <button class="add-btn" data-name="Wide Leg Denim" data-price="1100">Сохранить</button>
+                </div>
+                <div class="card" data-stock="in">
+                    <div class="img-box contain-img"><img src="jeans2.jpg" alt="Джинсы 2"></div>
+                    <h3>Baggy Jeans</h3>
+                    <p class="price">1500 KGS</p>
+                    <button class="add-btn" data-name="Baggy Jeans" data-price="1500">Сохранить</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-accessories" class="content-section">
+            <h2>Аксессуары</h2>
+
+            <div class="filter-bar" id="filter-bar">
+                <button class="filter-btn active" data-category="all">Все</button>
+                <button class="filter-btn" data-category="bags">Сумки</button>
+                <button class="filter-btn" data-category="glasses">Очки</button>
+                <button class="filter-btn" data-category="cases">Чехлы</button>
+                <button class="filter-btn" data-category="jewelry">Бижутерия</button>
+            </div>
+
+            <div class="product-grid">
+                <div class="card accessory-item" data-category="bags" data-stock="in">
+                    <div class="img-box"><img src="bag1.jpg" alt="Сумка 1"></div>
+                    <h3>Bag</h3>
+                    <p class="price">400 KGS</p>
+                    <button class="add-btn" data-name="Bag 1" data-price="400">Сохранить</button>
+                </div>
+                <div class="card accessory-item" data-category="bags" data-stock="in">
+                    <div class="img-box"><img src="bag2.jpg" alt="Сумка 2"></div>
+                    <h3>Street Shoulder Bag</h3>
+                    <p class="price">500 KGS</p>
+                    <button class="add-btn" data-name="Street Shoulder Bag" data-price="500">Сохранить</button>
+                </div>
+                <div class="card accessory-item" data-category="bags" data-stock="in">
+                    <div class="img-box"><img src="bag3.jpg" alt="Сумка 3"></div>
+                    <h3>Bag Casual</h3>
+                    <p class="price">450 KGS</p>
+                    <button class="add-btn" data-name="Bag Casual" data-price="450">Сохранить</button>
+                </div>
+
+                <div class="card accessory-item" data-category="glasses" data-stock="in">
+                    <div class="img-box"><img src="glasses1.jpg" alt="Очки"></div>
+                    <h3>Oversized Oval Sunglasses</h3>
+                    <p class="price">200 KGS</p>
+                    <button class="add-btn" data-name="Oversized Oval Sunglasses" data-price="200">Сохранить</button>
+                </div>
+                
+                <div class="card accessory-item" data-category="cases" data-stock="in">
+                    <div class="img-box"><img src="pc.jpg" alt="Чехол PC"></div>
+                    <h3>Phone Case</h3>
+                    <p class="price">250 KGS</p>
+                    <button class="add-btn" data-name="PC Case" data-price="250">Сохранить</button>
+                </div>
+                
+                <div class="card accessory-item" data-category="jewelry" data-stock="in">
+                    <div class="img-box"><img src="jwl1.jpg" alt="Бижутерия"></div>
+                    <h3>Silver Chain Necklace</h3>
+                    <p class="price">250 KGS</p>
+                    <button class="add-btn" data-name="Silver Chain Necklace" data-price="250">Сохранить</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-about" class="content-section">
+            <h2>О нас</h2>
+            <div class="card">
+                <p>Мы — магазин качественной одежды и стильных аксессуаров <b>hanaga.store</b>.</p>
+                <p>Пока что мы работаем как онлайн-каталог. Вы можете просматривать цены и сохранять то, что вам понравилось.</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-overlay" id="cart-panel">
+        <div class="cart-header">
+            <h3>Мои сохраненные</h3>
+            <span id="cart-close" style="cursor:pointer; font-size:1.5rem">✕</span>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <p id="total-price" style="font-weight:500; margin-bottom:15px">Итого: 0 KGS</p>
+            <button id="clear-cart">Очистить всё</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">HANAGA.STORE</div>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Telegram</a>
+        </div>
+        <p class="copy">© 2026 hanaga.store. Все права защищены.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
